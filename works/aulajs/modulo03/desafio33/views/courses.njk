@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+    <header>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <base href="/">
+        <link rel="stylesheet" href="/styles.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+
+    </header>
+
+    <body id="contentBody">
+        <div class="headerContent">
+            <h1 id="content"><center>Cursos Disponíveis</center></h1>
+            <button class="button"><a href="/" >Voltar</a></button>    
+        </div>
+        
+
+        <div class="cards">
+            {% for item in items %}
+            <div id="{{item.id}}" class="card">
+                <div class="courseName"><img src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/assets/{{item.id_link_img_courses}}.svg" alt="{{item.id}}"></div>
+                <div class="modules">{{item.modules}}</div>
+                <div class="pricing"> {{item.pricing}}</div>
+
+            </div>
+            {% endfor %}
+        </div>
+
+        <script src="/scripts.js"></script>
+
+    </body>
+
+
+</html>

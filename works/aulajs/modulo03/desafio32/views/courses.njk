@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+    <header>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <base href="/">
+        <link rel="stylesheet" href="/styles.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+
+    </header>
+
+    <body id="contentBody">
+        <div class="headerContent">
+            <h1 id="content"><center>Cursos Disponíveis</center></h1>
+            <button class="button"><a href="/" >Voltar</a></button>    
+        </div>
+        
+
+        <div class="cards">
+            {% for item in items %}
+            <div id="{{item.id}}" class="card">
+                <div class="courseName"><img src="https://skylab.rocketseat.com.br/static/{{item.id_link_img_courses}}.svg" alt="{{item.id}}"></div>
+                <div class="modules">{{item.modules}}</div>
+                <div class="pricing">{{item.pricing}}</a></div>
+
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="modal-overlay">
+            <div class="modal " >
+                <a class="close-modal">
+                    <i class="material-icons">close</i>
+                </a>
+
+                <div class="maximize">
+                    <span class="material-icons">
+                        fullscreen
+                        </span>
+                </div>
+
+                <div class="minimize">
+                    <span class="material-icons">
+                        fullscreen_exit
+                        </span>
+                </div>
+
+                <div class="modal-content">
+
+                    <iframe  src="" frameborder="0"></iframe>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="/scripts.js"></script>
+
+    </body>
+
+
+</html>

@@ -1,0 +1,320 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+body{
+    background: rgb(66, 64, 64);
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.link{
+    margin-right: 30px;
+
+}
+
+header{
+    padding: 30px;
+
+}
+
+.links {
+    text-align: center;
+    background-color: rgb(82, 77, 77);
+    border-radius: 8px;
+    width: 40%;
+    padding: 30px;
+    margin-left: 31.75%;
+    font-weight: 300;
+
+}
+
+.links :hover{
+    color: rgb(0, 43, 51);
+    transition: color 400ms;
+
+}
+
+#main-screen-image{
+    border: 5px solid #5488;
+    border-radius: 10%;
+    margin: 50px 27%;
+    width: 50%;
+
+}
+
+.top{
+    margin-top: 10px;
+    padding: 0px;
+    border: 0px;
+    text-align: center;
+    margin-bottom: 80px;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+            
+}
+
+.description {
+    padding: 15px;
+    text-align: center;
+    background-color: rgb(60, 57, 61);
+    font-weight: bold;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    color: rgb(200, 194, 216);
+    width: 100%;
+}
+
+.table {
+    text-align: left;
+    margin: 15px ;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.table .tecnos {
+    font-size: 20px;
+    padding: 70px;
+}
+
+.networks{   
+    font-size: 20px;
+    padding: 70px 70px 70px 70px;
+
+}
+
+.networks :hover{
+    color: rgb(0, 43, 51);
+    transition: color 400ms;
+
+}
+
+/* content.html */
+
+#content{
+    font-weight: normal;
+    font-size: 45px;
+    color: white;
+    margin-left: 850px;
+    
+}
+
+.button{
+    width: 70px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: 50px;
+    color: white;
+    background-color: black;
+    border: 1px solid #44b2c5;
+    border-radius: 20%;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+.headerContent{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card{
+    border-radius: 5%;
+}
+
+.cards{
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    gap: 150px;
+}
+
+#content{
+    margin-bottom: 100px;
+}
+
+#starter{
+    background-color: #352666; 
+
+}
+
+#launchbase{
+    background-color: #a54f09;
+}
+
+#gostack{
+    background-color: darkgreen;
+}
+
+.courseName{
+    font-size: 45px;
+    margin: 40px;
+}
+
+.modules{
+    font-size: 30px;
+    margin: 150px;
+}
+
+.pricing{
+    font-size: 25px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.pricing :hover{
+    color: black;
+    transition: color 400ms;
+}
+
+#contentBody{
+    background-color: black;
+}
+
+.modal-overlay{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal{
+    background-color: #ffffff;
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto ;
+    position: relative;
+
+}
+
+.modal .close-modal{
+    color: black;
+    position: absolute;
+    right: 0;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.modal .maximize{
+    color: black;
+    position: absolute;
+    margin: 8px;
+    cursor: pointer;
+}
+
+/* modal active */
+
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+iframe{
+    /* width: 100%; */
+    height: 95.01%;
+    /* position: absolute; */
+    /* top: 5%; */
+    
+}
+
+.modal.max{
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: 0px;
+}
+
+.modal .minimize{
+    color: black;
+    position: absolute;
+    margin: 8px 40px;
+    cursor: pointer;
+}
+
+/* Course.njk */
+
+.course{
+    background-color:rgba(0, 0, 0, 0.842);
+    color: rgba(255, 255, 255, 0.918);
+
+}
+
+
+.name-course{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 2%;
+}
+
+/* .modal-content{
+    max-width: 100px;
+    max-height: 100px;
+} */
+
+.page-template{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+
+}
+
+    .popopo{
+        width: 62%;
+        height: 700px;
+        margin-left: 2%;
+    }
+
+        .iframe-course{
+            width: 100%;
+            height: 100%;
+            border-radius: 1%;
+            display: block;
+        }
+
+    .right_side_page{
+        width: 20%;
+        margin: 0 auto;
+    }
+
+        .modules-course{
+            text-align: center;
+            margin-bottom: 20%;
+            font-size: 40px;
+        }
+
+        .course_phrase{
+            font-size: 35px;
+        }
+
+            #starter_bold_phrase{
+                color: rgb(109, 19, 212);
+                font-weight: bold;
+            }
+
+            #launchbase_bold_phrase{
+                color: orange;
+                font-weight: bold;
+            }
+
+            #gostack_bold_phrase{
+                color: rgb(11, 117, 11);
+                font-weight: bold;
+            }

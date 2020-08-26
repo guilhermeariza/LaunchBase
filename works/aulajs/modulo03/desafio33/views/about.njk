@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+    <header>
+        <base href="/">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+        <link rel="icon" src="https://raw.githubusercontent.com/Rocketseat/bootcamp-launchbase-desafios-02/master/desafios/favicon.ico" type="image/x-icon" />
+
+        <link rel="stylesheet" type="text/css" href="/styles.css">
+
+    </header>
+
+
+
+    <body>
+        <header>
+                <div class="top">
+                    {{about.head}}
+                </div>
+
+                <div class="links">
+                    {% for link in about.links %}
+                    <a class="link" href="{{link.url}}" target="{{link.link_target}}">{{link.name}}</a>
+                    {% endfor %}
+                </div>    
+
+                
+                 
+        </header>
+
+       
+        <div>
+            <img id="main-screen-image" src="https://http2.mlstatic.com/D_NQ_NP_682094-MLB41749786878_052020-V.jpg" alt="rocketseat">
+
+        </div>
+
+
+        <div class="description">
+
+            <h1>Empresa focada no ensino de programação.</h1>
+
+        </div>    
+            <div class="table">
+                <div>
+                    
+                    <ul class="tecnos">
+                        <h2>Tecnologias apresentadas: </h2>
+                        <li>Node.js</li>
+                        <li>React.js</li>
+                        <li>React Native</li>
+                    </ul>
+
+                </div>
+
+                <div class="networks">
+                    <h2>Redes Sociais:</h2>
+                    <ul>
+                        {% for link in about.footer_links %}
+                        <li>
+                            <a class="link" href="{{link.url}}" target="_blank">{{link.name}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    
+                </div> 
+
+
+            </div>
+            
+
+
+        
+ 
+    </body>
+
+
+
+
+</html>
