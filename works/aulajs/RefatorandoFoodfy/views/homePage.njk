@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+            <div class="introduction">
+
+                <div class="left-int">
+
+                    <div class="header-introduction">As Melhores receitas</div>
+                    <div class="def-introduction">
+                        <p>Aprenda a construir os melhores pratos<br> com receitas criadas por profissionais<br> do mundo inteiro</p>
+                    </div>
+
+                </div>
+                <div class="chef">
+                    <img id="chefImg" src="assets/chef.png" alt="chef" >
+                </div>
+
+            </div>
+            <h2 class="second-title"> Mais acessadas </h2> 
+            <div class="cards">
+                    <div id="tbb" class="card">
+                            
+                            <div class="food-cards"></div>
+                            <div class="imagem"><img id="cardImg"  src="/assets/burger.png" alt="triplo bacon burger"></div>
+                            <div class="name">Triplo bacon burger</div>
+                            <div class="owner">por Jorge Relato</div>
+                    </div>
+                    <div id="pzz" class="card">
+                            <div class="food-cards"></div>
+                            <div class="imagem"><img id="cardImg"  src="/assets/pizza.png" alt="pizza"></div>
+                            <div class="name">Pizza 4 estações</div>
+                            <div class="owner">por Fabiana Melo</div>
+                    </div>
+                    <div id="espg" class="card">
+                            <div class="food-cards"></div>
+                            <div class="imagem"><img id="cardImg"  src="/assets/espaguete.png" alt="espaguete"></div>
+                            <div class="name">Espaguete ao alho</div>
+                            <div class="owner">por Júlia Kinoto</div>
+                    </div>
+                    <div id="lsn" class="card">
+                            <div class="food-cards"></div>
+                            <div class="imagem"><img id="cardImg"  src="/assets/lasanha.png" alt="lasanha"></div>
+                            <div class="name">Lasanha mac n’ cheese</div>
+                            <div class="owner">por Juliano Vieira</div>
+                    </div>
+                    <div id="dc" class="card">
+                            <div class="food-cards"></div>
+                            <div class="imagem"><img id="cardImg"  src="/assets/doce.png" alt="doce"></div>
+                            <div class="name">Docinhos pão-do-céu</div>
+                            <div class="owner">por Ricardo Golvea</div>
+                    </div>
+                    <div id="asn" class="card">
+                            <div class="food-cards"></div>
+                            <div class="imagem"><img id="cardImg"  src="/assets/asinhas.png" alt="asinhas"></div>
+                            <div class="name">Asinhas de frango ao barbecue</div>
+                            <div class="owner">por Vania Steroski</div>
+                    </div>
+        
+            </div>
+
+
+            </div>
+            <div class="directFoodfy">
+                Todos direitos reservados, receitas Foodfy.
+            </div>
+
+            <div class="modal-overlay ">
+                <div class="modal">
+                    <div class="close-modal">
+                        Fechar modal
+                    </div>
+                    <div class="modal-content">
+
+                        <div class="food-cards"></div>
+                            <img class="modal-imagem" id="modal-cardImg" src="/foodfy/assets/asinhas.png">
+                            <div class="modal-name">Asinhas de frango ao barbecue</div>
+                            <div class="modal-owner">por Vania Steroski</div>
+
+                    </div>
+                </div>
+            </div>
+
+            <script src="/scripts.js"></script>
+{% endblock %}
