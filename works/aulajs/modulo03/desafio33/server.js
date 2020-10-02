@@ -12,7 +12,7 @@ nunjucks.configure("views", {
     express: server,
     autoescape: false   
 })
-server.listen(5000, function(){
+server.listen(3000, function(){
     console.log("Server on")
 })
 server.get("/", function(req, res){

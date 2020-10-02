@@ -138,103 +138,215 @@ a{
     font-size: 14px;
     color: #999999;
     text-align: center;
-    padding: 23px 25% 23px 25%;
+    padding: 25px;
+    bottom: 0;
+    justify-content: center;
+    width: 1fr;
+}
+
+#pageRecipes .directFoodfy{
+    position: fixed
 }
 
 /* page sobre */
 
-#sobre-Foodfy{
-    margin-bottom: 50px;
-}
+    #sobre-Foodfy{
+        margin-bottom: 50px;
+    }
 
-.int-page-sobre{
-    margin-left: 16.4%;
-    /* margin-top: 50px; */
-    margin-bottom: 20px;
-}
+    .int-page-sobre{
+        margin-left: 16.4%;
+        margin-bottom: 20px;
+    }
 
-.p-sobre{
-    width: 67.1%;
-    margin-left: 16.4%;
-    /* font-family: Roboto-Regular; */
-    font-size: 18px;
-    color: #444444;
-    line-height: 28px;
-    margin-bottom: 30px;
-}
+    .p-sobre{
+        width: 67.1%;
+        margin-left: 16.4%;
+        font-size: 18px;
+        color: #444444;
+        line-height: 28px;
+        margin-bottom: 30px;
+    }
 
-#second-int-page-sobre{
-    /* font-family: Roboto-Bold; */
-    font-size: 20px;
-    color: #111111;
-    font-weight: bold;
-}
+    #second-int-page-sobre{
+        font-size: 20px;
+        color: #111111;
+        font-weight: bold;
+    }
 
 /* MODAL */
 
-.modal-overlay{
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    visibility: hidden;
-    opacity: 0;
-}
+    .modal-overlay{
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        visibility: hidden;
+        opacity: 0;
+    }
 
-.modal{
-    background-color: white;
-    position: relative;
-    margin: 20vh auto;
-    width: 52.8%;
-    height: 68.2%;
-    border-radius: 30px;
+    .modal{
+        background-color: white;
+        position: relative;
+        margin: 20vh auto;
+        width: 52.8%;
+        height: 68.2%;
+        border-radius: 30px;
 
-}
+    }
 
-.modal .close-modal{
-    color: #999999;
-    position: absolute;
-    cursor: pointer;
-    bottom: 30px;
-    font-size: 16px;
-    width: 100%;
-    text-align: center;
-    
-}
+    .modal .close-modal{
+        color: #999999;
+        position: absolute;
+        cursor: pointer;
+        bottom: 30px;
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+        
+    }
 
 /* modal-active */
 
 
-.modal-overlay.active{
-    opacity: 1;
-    visibility: visible;
-}
+    .modal-overlay.active{
+        opacity: 1;
+        visibility: visible;
+    }
 
-#modal-cardImg{
-    align-items: center;
-    margin-left: 5%;
-    margin-top: 5%;
-    /* margin: 0 auto; */
-    width: 90%;
-    margin-bottom: 20px;
-    border-radius: 15px;
-    height: 20%;
+    #modal-cardImg{
+        align-items: center;
+        margin-left: 5%;
+        margin-top: 5%;
+        /* margin: 0 auto; */
+        width: 90%;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        height: 20%;
 
-}
+    }
 
-.modal-name{
-    font-size: 24px;
-    color: #111111;
-    text-align: center;
-}
-.modal-owner{
-    font-size: 18px;
-    color: #777777;
-    text-align: center;
-    margin-bottom: 60px;
-}
+    .modal-name{
+        font-size: 24px;
+        color: #111111;
+        text-align: center;
+    }
+    .modal-owner{
+        font-size: 18px;
+        color: #777777;
+        text-align: center;
+        margin-bottom: 60px;
+    }
 
-.modal-content{
-    position: relative;
-}
+    .modal-content{
+        position: relative;
+    }
+/*
+style especifico da pageRecipes
+*/
+
+    .beginInformation{
+        display: flex;
+    }
+    #pageRecipeImg{
+        width: 130%;
+        border-radius: 15px;
+        transform: translate(-12%);
+        margin-bottom: 34px;
+    }
+
+    .pageRecipeName{
+        text-align: center;
+        font-size: 36px;
+        color: #111111;
+        margin-bottom: 4px;
+    }
+
+    .pageRecipeOwner{
+        font-size: 20px;
+        color: #777777;
+        text-align: center;
+        margin-bottom: 61px;
+    }
+
+    #prepare .topics{
+        margin-bottom: 30px;
+        color: #111111;
+    }
+
+    .topics{
+        margin-bottom: 30px;
+        color: #111111;
+        font-size: 24px;
+    }
+
+    .buttonHide{
+        margin-left: 8px;
+        color: #999999;
+        cursor: pointer;
+        line-height: 3;
+    }
+
+    /* .ingredients{
+
+    } */
+
+    .subTopics{
+        margin-top: 30px;
+        color: black;
+        font-size: 12px;
+    }
+
+    .eachOne{
+        color: black;
+        margin-bottom: 8px;
+        font-size: 18px;
+
+    }
+
+/*
+Funcionalidade de mostrar e esconder ingredientes
+*/
+
+    a.hide-action{
+        color: #999999;
+        font-size: 12px;
+    }
+
+    a.show-action{
+        color: #999999;
+        font-size: 12px;
+    }
+
+    #box-1 .mostrar,
+    #box-1 .hide-action,
+    #box-2 .mostrar,
+    #box-2 .hide-action,    
+    #box-3 .mostrar,
+    #box-3 .hide-action{
+        display: none;
+    }
+
+    #box-1:target .mostrar,
+    #box-1:target .hide-action,
+    #box-2:target .mostrar,
+    #box-2:target .hide-action,
+    #box-3:target .mostrar,
+    #box-3:target .hide-action{
+        display: block;
+        color: #999999;
+
+    }
+
+    #box-1:target .show-action,
+    #box-2:target .show-action,
+    #box-3:target .show-action{
+        display: none;
+    }
+
+/*Funcionalidade de aparecer e desaparecer as informações adicionais */
+
+    .removeInformation{
+        display: none;
+    }

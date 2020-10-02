@@ -1,24 +1,23 @@
-const modalOverlay = document.querySelector(".modal-overlay");
 const cards = document.querySelectorAll(".card");
-const eachCard = document.querySelector(".card");
 
-function changeModal(card) {
-    modalOverlay.querySelector(".modal-imagem").src = card.querySelector(".imagem").src;
-    modalOverlay.querySelector(".modal-owner").innerText = card.querySelector(".owner").innerText;
-    modalOverlay.querySelector(".modal-name").innerText = card.querySelector(".name").innerText;
-    modalOverlay.querySelector("#modal-cardImg").src = card.querySelector("#cardImg").src;
+const ingredients = document.querySelector(".ingredients");
 
-}
+const verification = document.querySelectorAll(".beginInformation")
+
+
 
 for(let card of cards){
     card.addEventListener("click", function(){
-        modalOverlay.classList.add('active')
-        changeModal(card);
-    })
+        const pageId = card.getAttribute("id");
 
+        window.location.href = `/pageRecipes?id=${pageId}`
+
+        if(document.getElementsByClassName(".eachOne").value === ""){       // Essa é a programação de aparecer e sumir
+            verification.classList.add(".removeInformation")                // as informações adicionais( especificamente nas linhas 15, 16 e 17)
+        }
+
+    })
+    
 }
 
-document.querySelector(".close-modal").addEventListener("click", function(){
-    modalOverlay.classList.remove("active")
-})
-
+    

@@ -1,0 +1,126 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <div id="{{item.id}}" class="card">
+            
+            <div class="food-cards"></div>
+
+            <div><img id="pageRecipeImg"  src="{{item.image}}" alt="{{item.alt}}"></div>
+
+            <div class="pageRecipeName" >{{item.name}}</div>
+
+            <div class="pageRecipeOwner" >{{item.owner}}</div>
+
+            <div class="beginInformation" >
+
+                <div class="topics">Ingredientes</div> 
+
+                <div class="buttonHide">
+
+                        <div id="box-1">
+                        
+                            <div class="baz">
+                                <a class="hide-action" href="#">OCULTAR</a>
+                                <a class="show-action" href="#box-1">EXIBIR</a>
+                                
+                            </div>
+                            <div class="foo">
+                                <div class="bar">
+                                    <div class="mostrar">
+                                        
+                                        <div class="subTopics">
+
+                                            <ul>
+                                                {% for ingredient in item.ingredients %}
+                                                    <li class="eachOne">{{ingredient}}</li>
+                                                {% endfor %}
+                                            </ul>
+                                        
+                                        </div><br>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>                    
+                </div>
+
+            </div><br>
+            
+            <div class="beginInformation">
+                <div class="topics">Modo de Preparo</div> 
+
+                    <div class="buttonHide">
+
+                            <div id="box-2">
+                            
+                                <div class="baz">
+                                    <a class="hide-action" href="#">OCULTAR</a>
+                                    <a class="show-action" href="#box-2">EXIBIR</a>
+                                    
+                                </div>
+                                <div class="foo">
+                                    <div class="bar">
+                                        <div class="mostrar">
+                                            
+                                            <div class="subTopics">
+
+                                                <ul>
+                                                    {% for eachPreparation in item.preparation %}
+                                                        <li class="eachOne">{{eachPreparation}}</li>
+                                                    {% endfor %}
+                                                </ul>
+                                            
+                                            </div><br>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>                    
+                    </div>
+            </div><br>
+
+
+
+
+
+
+            <div class="beginInformation">
+                <div class="topics">Informações adicionais </div> 
+
+                    <div class="buttonHide">
+
+                            <div id="box-3">
+                            
+                                <div class="baz">
+                                    <a class="hide-action" href="#">OCULTAR</a>
+                                    <a class="show-action" href="#box-3">EXIBIR</a>
+                                    
+                                </div>
+                                <div class="foo">
+                                    <div class="bar">
+                                        <div class="mostrar">
+                                            
+                                            <div class="eachOne">{{item.information}}</div><br>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>                    
+                    </div>
+            </div><br>
+
+
+
+
+    </div>        
+        
+    <div id="pageRecipes" class="directFoodfy">
+        Todos direitos reservados, receitas Foodfy.
+    </div>
+
+<script src="/scripts.js">
+{% endblock %}

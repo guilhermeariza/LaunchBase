@@ -1,101 +1,32 @@
-{% extends "layout.html" %}
+{% extends "layout.njk" %}
 
 {% block content %}
 
         <div class="cards">
-            <div class="card">
-                    
-                    <div class="food-cards"></div>
-                    <div class="imagem"><img id="cardImg"  src="/assets/burger.png" alt="triplo bacon burger"></div>
-                    <div class="name">Triplo bacon burger</div>
-                    <div class="owner">por Jorge Relato</div>
-            </div>
-            <div class="card">
-                    <div class="food-cards"></div>
-                    <div class="imagem"><img id="cardImg"  src="/assets/pizza.png" alt="triplo bacon burger"></div>
-                    <div class="name">Pizza 4 estações</div>
-                    <div class="owner">por Fabiana Melo</div>
-            </div>
-            <div class="card">
-                    <div class="food-cards"></div>
-                    <div class="imagem"><img id="cardImg"  src="/assets/espaguete.png" alt="triplo bacon burger"></div>
-                    <div class="name">Espaguete ao alho</div>
-                    <div class="owner">por Júlia Kinoto</div>
-            </div>
-            <div class="card">
-                    <div class="food-cards"></div>
-                    <div class="imagem"><img id="cardImg"  src="/assets/lasanha.png" alt="triplo bacon burger"></div>
-                    <div class="name">Lasanha mac n’ cheese</div>
-                    <div class="owner">por Juliano Vieira</div>
-            </div>
-            <div class="card">
-                    <div class="food-cards"></div>
-                    <div class="imagem"><img id="cardImg"  src="/assets/doce.png" alt="triplo bacon burger"></div>
-                    <div class="name">Docinhos pão-do-céu</div>
-                    <div class="owner">por Ricardo Golvea</div>
-            </div>
-            <div class="card">
-                    <div class="food-cards"></div>
-                    <div class="imagem"><img id="cardImg"  src="/assets/asinhas.png" alt="triplo bacon burger"></div>
-                    <div class="name">Asinhas de frango ao barbecue</div>
-                    <div class="owner">por Vania Steroski</div>
-            </div>
+                {% for item in items %}
+                        <div id="{{item.id}}" class="card">
+                                <div class="food-cards"></div>
+                                <div class="imagem"><img id="cardImg"  src="{{item.imageRecipes}}" alt="{{item.alt}}"></div>
+                                <div class="name">{{item.name}}</div>
+                                <div class="owner">{{item.owner}}</div>
+                        </div>       
+                {% endfor %}
 
-            <div class="card">
-                        
-                <div class="food-cards"></div>
-                <div class="imagem"><img id="cardImg"  src="/assets/burger.png" alt="triplo bacon burger"></div>
-                <div class="name">Triplo bacon burger</div>
-                <div class="owner">por Jorge Relato</div>
-            </div>
-                <div class="card">
-                        <div class="food-cards"></div>
-                        <div class="imagem"><img id="cardImg"  src="/assets/pizza.png" alt="triplo bacon burger"></div>
-                        <div class="name">Pizza 4 estações</div>
-                        <div class="owner">por Fabiana Melo</div>
-                </div>
-                <div class="card">
-                        <div class="food-cards"></div>
-                        <div class="imagem"><img id="cardImg"  src="/assets/espaguete.png" alt="triplo bacon burger"></div>
-                        <div class="name">Espaguete ao alho</div>
-                        <div class="owner">por Júlia Kinoto</div>
-                </div>
-                <div class="card">
-                        <div class="food-cards"></div>
-                        <div class="imagem"><img id="cardImg"  src="/assets/lasanha.png" alt="triplo bacon burger"></div>
-                        <div class="name">Lasanha mac n’ cheese</div>
-                        <div class="owner">por Juliano Vieira</div>
-                </div>
-                <div class="card">
-                        <div class="food-cards"></div>
-                        <div class="imagem"><img id="cardImg"  src="/assets/doce.png" alt="triplo bacon burger"></div>
-                        <div class="name">Docinhos pão-do-céu</div>
-                        <div class="owner">por Ricardo Golvea</div>
-                </div>
-                <div class="card">
-                        <div class="food-cards"></div>
-                        <div class="imagem"><img id="cardImg"  src="/assets/asinhas.png" alt="triplo bacon burger"></div>
-                        <div class="name">Asinhas de frango ao barbecue</div>
-                        <div class="owner">por Vania Steroski</div>
-                </div>
+                {% for item in items %}
+                                <div id="{{item.id}}" class="card">
+                                        <div class="food-cards"></div>
+                                        <div class="imagem"><img id="cardImg"  src="{{item.imageRecipes}}" alt="{{item.alt}}"></div>
+                                        <div class="name">{{item.name}}</div>
+                                        <div class="owner">{{item.owner}}</div>
+                                </div>       
+                {% endfor %}
 
-            
         </div>
 
-        <div class="modal-overlay ">
-                <div class="modal">
-                    <div class="close-modal">
-                        Fechar modal
-                    </div>
-                    <div class="modal-content">
-    
-                        <div class="food-cards"></div>
-                            <img class="modal-imagem" id="modal-cardImg" src="/foodfy/assets/asinhas.png">
-                            <div class="modal-name">Asinhas de frango ao barbecue</div>
-                            <div class="modal-owner">por Vania Steroski</div>
-    
-                    </div>
-                </div>
-            </div>
-        <script src="/scripts.js"></script>
+    <div class="directFoodfy">
+        Todos direitos reservados, receitas Foodfy.
+    </div>
+
+            <script src="/scripts.js"></script>
+        
 {% endblock %}
